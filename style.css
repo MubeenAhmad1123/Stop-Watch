@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: linear-gradient(to right, #7F00FF, #E100FF);
+  font-family: 'Segoe UI', sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+}
+.container {
+  background-color: wheat;
+  padding: 2rem 3rem;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+h1 {
+  color: #7F00FF;
+  margin-bottom: 1.5rem;
+}
+.time {
+  font-size: 2.8rem;
+  font-weight: bold;
+  margin-bottom: 1.6rem;
+  color: #111;
+}
+.buttons {
+  margin-bottom: 1.5rem;
+}
+.buttons button {
+  padding: 0.6rem 1.1rem;
+  font-size: 1rem;
+  margin: 0.3rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+#start { background: #28a745; color: white; }
+#pause { background: #ffc107; color: black; }
+#reset { background: #dc3545; color: white; }
+#lap   { background: #17a2b8; color: white; }
+
+.buttons button:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
+}
+.laps {
+  text-align: left;
+  max-height: 200px;
+  overflow-y: auto;
+  margin-top: 1rem;
+  padding-right: 5px;
+}
+.laps h3 {
+  color: #7F00FF;
+  margin-bottom: 0.8rem;
+}
+.laps ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.laps li {
+  background: #f1f1f1;
+  margin-bottom: 5px;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  font-weight: 500;
+}
+.card {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px); 
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); 
+}
+
+@keyframes glow-green {
+  0%, 100% { box-shadow: 0 0 5px #28a745; }
+  50% { box-shadow: 0 0 20px #28a745; }
+}
+
+@keyframes glow-yellow {
+  0%, 100% { box-shadow: 0 0 5px #ffc107; }
+  50% { box-shadow: 0 0 20px #ffc107; }
+}
+
+@keyframes glow-red {
+  0%, 100% { box-shadow: 0 0 5px #dc3545; }
+  50% { box-shadow: 0 0 20px #dc3545; }
+}
+
+@keyframes glow-blue {
+  0%, 100% { box-shadow: 0 0 5px #17a2b8; }
+  50% { box-shadow: 0 0 20px #17a2b8; }
+}
+.glow-start {
+  animation: glow-green 0.5s ease-out;
+}
+.glow-pause {
+  animation: glow-yellow 0.5s ease-out;
+}
+.glow-reset {
+  animation: glow-red 0.5s ease-out;
+}
+.glow-lap {
+  animation: glow-blue 0.5s ease-out;
+}
